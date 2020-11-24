@@ -1,36 +1,55 @@
-
 <!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Weather Journal</title>
-<link href="https://fonts.googleapis.com/css?family=Oswald:400,600,700|Ranga:400,700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-</head>
- <body>
-<div id = "app">
-  <div class ="holder headline">
-    Weather Journal App
-  </div>
-  <div class ="holder zip">
-    <label for="zip">Enter Zipcode here</label>
-    <input type="text" id="zip" placeholder="enter zip code here">
-  </div>
-  <div class ="holder feel">
-    <label for="feelings">How are you feeling today?</label>
-    <textarea class= "myInput" id="feelings" placeholder="Enter your feelings here" rows="9" cols="50"></textarea>
-    <button id="generate" type = "submit"> Generate </button>
-  </div>
-  <div class ="holder entry">
-    <div class = "title">Most Recent Entry</div>
-   <div id = "entryHolder">
-    <div id = "date"></div>
-   <div id = "temp"></div>
-   <div id = "content"></div>
-  </div>
-  </div>
-  </div>
-<script src="app.js" type="text/javascript"></script>
-
-</body>
+  <html>
+    <head>
+      <meta charset="UTF-8">
+      <title>Travel App</title>
+    </head>
+    <body>
+        <section id="traveling">
+          <h1 class="WhyTravel">Why we need to travel?</h1>
+          <p>The journey can be long or short, but it's not important! The important is to live fully every second, every situation, live the emotions every single moment!<br> We have to travel because we need to be happy, live with carefreeness and above all we need to know the world, the traditions of a population, the places, and this, in order not to remain ignorant.<br><strong>Traveling opens the mind!!</strong></p>
+        </section>
+        <br>
+        <hr>
+        <section id="MyJourney">
+            <div class="the_trip">
+                <form class="form_content" onsubmit="return Client.handleSubmit(event)">
+                  <h2 class="form-text">Plan your trip</h2>
+                  <input type="text" id="input-from" name="from" placeholder="Departing" autocomplete="off" required>
+                  <input type="text" id="input-to" name="to" placeholder="Arriving" autocomplete="off" required>
+                  <input type="date" id="input-date" name="date" required>
+                  <button type="submit" class="button button-submit" name="submit" value="Submit" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)">Search</button>
+                </form>
+            </div>
+        </section>
+        <br>
+        <hr>
+        <section id="results">
+            <div class="the_results">
+                <div class="MyResults">
+                  <h2 class="dep-text-result">Departing: <span class="departing"></span></h2>
+                  <h2 class="arr-text-result">Arriving: <span class="arriving"></span></h2>
+                  <h2 class="city-text-result">Destination: <span class="city"></span></h2>
+                  <h2 class="days-text-result">Journey starts in: <span class="trip"></span></h2>
+                  <h2 class="weather-text-result">Weather will be: <span class="weather"></span></h2>
+                  <button class="button button-print" id="print" href="#">Print booking</button>
+                  <button class="button button-change" id="change" href="#">Change booking</button>
+                </div>
+            </div>
+        </section>
+        <br>
+        <br>
+        <footer>
+            <div class="name">
+                Made by Andrea Scacchi
+            </div>
+        </footer>
+        <script>
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js');
+                });
+            }
+        </script>
+    </body>
 </html>
