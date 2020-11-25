@@ -7,16 +7,16 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/server/server.js",
     "build-prod": "webpack --config webpack.prod.js",
-    "build-dev": "webpack-dev-server --config webpack.dev.js --open"
+    "build-dev": "webpack serve --config webpack.dev.js --open"
   },
-  "author": "",
+  "author": "Andrea Scacchi",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "webpack": "^5.6.0",
-    "webpack-cli": "^4.2.0"
+    "node-fetch": "^2.6.1",
+    "webpack-dev-server": "^3.11.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.7",
@@ -31,6 +31,8 @@
     "sass-loader": "^10.1.0",
     "style-loader": "^2.0.0",
     "terser-webpack-plugin": "^5.0.3",
-    "webpack-dev-server": "^3.11.0"
+    "webpack": "^5.6.0",
+    "webpack dev-server": "^3.11.0",
+    "webpack-cli": "^4.2.0"
   }
 }
