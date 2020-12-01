@@ -1,2 +1,4 @@
-import './styles/style.scss'
+import { theButton } from './js/app'
 
+
+import './styles/style.scss'
