@@ -1,1 +1,504 @@
+body {
+    background: #0b525b;
+    color: #000;
+}
 
+#traveling {
+    text-align: center;
+    font-size: 22px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 55px;
+    margin-bottom: 55px;
+    font-family: cursive;
+    font-style: italic;
+}
+
+.WhyTravel {
+    font-size: 3em;
+    color: #adb5bd;
+}
+
+.form-text {
+    font-size: 2em;
+    font-style: italic;
+    font-family: cursive;
+    color: #ff6d00;
+}
+
+input {
+    display: inline;
+    background: #ffffff;
+    color: #000;
+    font-size: 14px;
+    font-style: oblique;
+    font-family: serif;
+    border: 5px solid black;
+}
+
+.from {
+    font-size: 20px;
+    font-style: italic;
+    font-family: fantasy;
+    color: #dddf00;
+}
+
+.to {
+    font-size: 20px;
+    font-style: italic;
+    font-family: fantasy;
+    color: #5e60ce;
+}
+
+.dep {
+    font-size: 20px;
+    font-style: italic;
+    font-family: fantasy;
+    color: #370617;
+}
+
+.arr {
+    font-size: 20px;
+    font-style: italic;
+    font-family: fantasy;
+    color: #1a4301;
+}
+
+.search_trip {
+    display: inline;
+    background: #ffffff;
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: oblique;
+    font-family: serif;
+    border: 5px solid black;
+    border-radius: 50px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 3px #999;
+}
+
+.search_trip:hover {
+    background: #d00000;
+    color: #000;
+}
+
+.MyResults {
+    font-size: 22px;
+    font-style: italic;
+    font-family: cursive;
+}
+
+.departing-text-result {
+    color: #d00000;
+}
+
+.arriving-text-result {
+    color: #ffba08;
+}
+
+.datee1-text-result {
+    color: #d23af0;
+}
+
+.datee2-text-result {
+    color: #00b4d8;
+}
+
+.days-text-result {
+    color: #a5a58d;
+}
+
+.weather-text-result {
+    color: #70e000;
+}
+
+.button-print, .button-change {
+    display: inline;
+    background: #ffffff;
+    color: #000;
+    font-size: 14px;
+    font-style: oblique;
+    font-family: serif;
+    border: 5px solid black;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 3px #999;
+}
+
+.button-print:hover {
+    background: #000;
+    color: #00b4d8;
+}
+
+.button-change:hover {
+    background: #000;
+    color: #e85d04;
+}
+
+.btn {
+    display: inline-block;
+    background: #6f1d1b;
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+    border: 5px solid black;
+    border-radius: 50px;
+    padding: 15px 32px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 3px #999;
+}
+
+.btn:hover {
+    background: #f6aa1c;
+    color: #000;
+}
+
+.name {
+    font-size: 1.5em;
+    font-family: monospace;
+    text-align: right;
+    color: #f4f0bb;
+}
+
+@media (max-width: 500px) {
+    body {
+        background: #aacc00;
+        color: #126782;
+    }
+
+    #traveling {
+        text-align: center;
+        font-size: 12px;
+        margin-left: 100px;
+        margin-right: 100px;
+        margin-top: 55px;
+        margin-bottom: 55px;
+        font-family: serif;
+        font-style: oblique;
+    }
+
+    .WhyTravel {
+        font-size: 1.2em;
+        color: #dc2f02;
+    }
+
+    .form-text {
+        font-size: 1em;
+        font-style: normal;
+        font-family: monospace;
+        color: #000;
+    }
+
+    input {
+        display: inline;
+        background: #000;
+        color: #e5e5e5;
+        font-size: 10px;
+        font-style: italic;
+        font-family: fantasy;
+        border: 5px solid #bc00dd;
+    }
+
+    .from {
+        font-size: 12px;
+        font-style: oblique;
+        font-family: cursive;
+        color: #ffffff;
+    }
+
+    .to {
+        font-size: 12px;
+        font-style: oblique;
+        font-family: cursive;
+        color: #9a031e;
+    }
+
+    .dep {
+        font-size: 12px;
+        font-style: oblique;
+        font-family: cursive;
+        color: #00171f;
+    }
+
+    .arr {
+        font-size: 12px;
+        font-style: oblique;
+        font-family: cursive;
+        color: #04a6c2;
+    }
+
+    .search_trip {
+        display: inline;
+        background: #000;
+        color: #ffd000;
+        font-size: 7px;
+        font-weight: bold;
+        font-style: oblique;
+        font-family: serif;
+        border: 5px solid #014f86;
+        border-radius: 50px;
+        text-align: center;
+        cursor: pointer;
+        box-shadow: 0 3px #780116;
+    }
+
+    .search_trip:hover {
+        background: #3b28cc;
+        color: #000;
+    }
+
+    .MyResults {
+        font-size: 14px;
+        font-style: normal;
+        font-family: sans-serif;
+    }
+
+    .departing-text-result {
+        color: #723d46;
+    }
+
+    .arriving-text-result {
+        color: #2a3d45;
+    }
+
+    .datee1-text-result {
+        color: #e36414;
+    }
+
+    .datee2-text-result {
+        color: #5c4d3c;
+    }
+
+    .days-text-result {
+        color: #000;
+    }
+
+    .weather-text-result {
+        color: #d6cfcb;
+    }
+
+    .button-print, .button-change {
+        display: inline;
+        background: #000;
+        color: #ffd000;
+        font-size: 8px;
+        font-style: oblique;
+        font-family: serif;
+        border: 5px solid #014f86;
+        font-weight: bold;
+        text-align: center;
+        border-radius: 50px;
+        cursor: pointer;
+        box-shadow: 0 3px #780116;
+    }
+
+    .button-print:hover {
+        background: #b7b7a4;
+        color: #03045e;
+    }
+
+    .button-change:hover {
+        background: #b7b7a4;
+        color: #245501;
+    }
+
+    .btn {
+        display: inline-block;
+        background: #000;
+        color: #ffd000;
+        font-size: 8px;
+        font-weight: bold;
+        border: 5px solid #014f86;
+        border-radius: 50px;
+        padding: 15px 32px;
+        text-align: center;
+        cursor: pointer;
+        box-shadow: 0 3px #780116;
+    }
+
+    .btn:hover {
+        background: #00f5d4;
+        color: #000;
+    }
+
+    .name {
+        font-size: 0.5em;
+        font-family: inherit;
+        text-align: right;
+        color: #ff7900;
+    }
+}
+
+@media (min-width: 501px) and (max-width: 750px) {
+    body {
+        background: #ff6000;
+        color: #b1a7a6;
+    }
+
+    #traveling {
+        text-align: center;
+        font-size: 17px;
+        margin-left: 100px;
+        margin-right: 100px;
+        margin-top: 55px;
+        margin-bottom: 55px;
+        font-family: monospace;
+        font-style: italic;
+    }
+
+    .WhyTravel {
+        font-size: 2em;
+        color: #144552;
+    }
+
+    .form-text {
+        font-size: 1.5em;
+        font-style: oblique;
+        font-family: sans-serif;
+        color: #5a189a;
+    }
+
+    input {
+        display: inline;
+        background: #cd9777;
+        color: #000;
+        font-size: 12px;
+        font-style: italic;
+        font-family: fantasy;
+        border: 5px solid #5390d9;
+    }
+
+    .from {
+        font-size: 15px;
+        font-style: oblique;
+        font-family: cursive;
+        color: #277da1;
+    }
+
+    .to {
+        font-size: 15px;
+        font-style: oblique;
+        font-family: cursive;
+        color: #4a4e69;
+    }
+
+    .dep {
+        font-size: 15px;
+        font-style: oblique;
+        font-family: cursive;
+        color: #2d6a4f;
+    }
+
+    .arr {
+        font-size: 15px;
+        font-style: oblique;
+        font-family: cursive;
+        color: #9a031e;
+    }
+
+    .search_trip {
+        display: inline;
+        background: #000;
+        color: #bb9457;
+        font-size: 10px;
+        font-weight: bold;
+        font-style: normal;
+        font-family: cursive;
+        border: 5px solid #d3d3d3;
+        border-radius: 50px;
+        text-align: center;
+        cursor: pointer;
+        box-shadow: 0 3px #263c41;
+    }
+
+    .search_trip:hover {
+        background: #b76935;
+        color: #00a896;
+    }
+
+    .MyResults {
+        font-size: 17px;
+        font-style: italic;
+        font-family: serif;
+    }
+
+    .departing-text-result {
+        color: #706677;
+    }
+
+    .arriving-text-result {
+        color: #a7c957;
+    }
+
+    .datee1-text-result {
+        color: #081c15;
+    }
+
+    .datee2-text-result {
+        color: #ffe8d6;
+    }
+
+    .days-text-result {
+        color: #64dfdf;
+    }
+
+    .weather-text-result {
+        color: #9d0208;
+    }
+
+    .button-print, .button-change {
+        display: inline;
+        background: #000;
+        color: #008000;
+        font-size: 11px;
+        font-style: normal;
+        font-family: cursive;
+        border: 5px solid #a100f2;
+        font-weight: bold;
+        text-align: center;
+        border-radius: 50px;
+        cursor: pointer;
+        box-shadow: 0 3px #263c41;
+    }
+
+    .button-print:hover {
+        background: #4cc9f0;
+        color: #fca311;
+    }
+
+    .button-change:hover {
+        background: #b5179e;
+        color: #000;
+    }
+
+    .btn {
+        display: inline-block;
+        background: #283618;
+        color: #ffffff;
+        font-size: 11px;
+        font-weight: bold;
+        border: 5px solid #ffb600;
+        border-radius: 50px;
+        padding: 15px 32px;
+        text-align: center;
+        cursor: pointer;
+        box-shadow: 0 3px #312244;
+    }
+
+    .btn:hover {
+        background: #9a8c98;
+        color: #d00000;
+    }
+
+    .name {
+        font-size: 1em;
+        font-family: sans-serif;
+        text-align: right;
+        color: #4ea8de;
+    }
+}
