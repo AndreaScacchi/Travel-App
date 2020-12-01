@@ -14,34 +14,57 @@
         <section id="MyJourney">
             <div class="the_trip">
                 <form class="form_content" onsubmit="return Client.handleSubmit(event)">
-                  <h2 class="form-text">Plan your trip</h2>
-                  <input type="text" id="input-from" name="from" placeholder="Departing" autocomplete="off" required>
-                  <input type="text" id="input-to" name="to" placeholder="Arriving" autocomplete="off" required>
-                  <input type="date" id="input-date" name="date" required>
-                  <button type="submit" class="button button-submit" name="submit" value="Submit" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)">Search</button>
+                  <h2 class="form-text">Plan your trip!</h2>
                 </form>
             </div>
         </section>
+        <div class="planTheTrip">
+            <div class="plan_trip">
+                <div class="from"><label for="firstCity">From:</label></div>
+                <div class="from1"><input type="text" id="firstCity" placeholder="Departure"></div>
+            </div>
+            <br>
+            <div class="plan_trip">
+                <div class="to"><label for="secondCity">To:</label></div>
+                <div class="to1"><input type="text" id="secondCity" placeholder="Destination"/></div>
+            </div>
+            <br>
+            <div class="plan_trip">
+                <div class="dep"><label for="date1">Departing:</label></div>
+                <div class="dep1"><input type="text" id="date1" placeholder="DD/MM/YYYY" onfocus="(this.type='date')" onblur="(this.type='text')" /></div>
+            </div>
+            <br>
+            <div class="plan_trip">
+                <div class="arr"><label for="date2">Arriving:</label></div>
+                <div class="arr1"><input type="text" id="date2" placeholder="DD/MM/YYYY" onfocus="(this.type='date')" onblur="(this.type='text')" /></div>
+            </div>
+            <br>
+            <button class="search_trip" id="the_search" href="#">Search</button>
+        </div>
         <br>
         <hr>
         <section id="results">
             <div class="the_results">
                 <div class="MyResults">
-                  <h2 class="dep-text-result">Departing: <span class="departing"></span></h2>
-                  <h2 class="arr-text-result">Arriving: <span class="arriving"></span></h2>
-                  <h2 class="city-text-result">Destination: <span class="city"></span></h2>
-                  <h2 class="days-text-result">Journey starts in: <span class="trip"></span></h2>
+                  <h2 class="departing-text-result">From: <span class="departing"></span></h2>
+                  <h2 class="arriving-text-result">To: <span class="arriving"></span></h2>
+                  <h2 class="datee1-text-result">Departing date: <span class="first_date"></span></h2>
+                  <h2 class="datee2-text-result">Arriving date: <span class="second_date"></span></h2>
+                  <h2 class="days-text-result">Trip starts in: <span class="days"></span></h2>
                   <h2 class="weather-text-result">Weather will be: <span class="weather"></span></h2>
-                  <button class="button button-print" id="print" href="#">Print booking</button>
-                  <button class="button button-change" id="change" href="#">Change booking</button>
+                  <button class="button-print" id="print" href="#">Print booking</button>
+                  <button class="button-change" id="change" href="#">Change booking</button>
                 </div>
             </div>
         </section>
         <br>
         <br>
+        <br>
+        <br>
         <footer>
+            <button id="generate" class="btn">TOP</button>
             <div class="name">
-                Made by Andrea Scacchi
+                <h5>Made by Andrea Scacchi</h5>
             </div>
         </footer>
     </body>
