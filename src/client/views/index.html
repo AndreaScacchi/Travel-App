@@ -39,7 +39,8 @@
                 <div class="arr1"><input type="text" id="date2" placeholder="DD/MM/YYYY" onfocus="(this.type='date')" onblur="(this.type='text')" /></div>
             </div>
             <br>
-            <button class="search_trip" id="the_search" href="#">Search</button>
+            <input type="submit" id="theSubmit" class="the_submit" name="submit" value="Submit">
+            <!-- <button class="search_trip" id="the_search" href="#">Search</button>-->
         </div>
         <br>
         <hr>
@@ -52,8 +53,8 @@
                   <h2 class="datee2-text-result">Arriving date: <span class="second_date"></span></h2>
                   <h2 class="days-text-result">Trip starts in: <span class="days"></span></h2>
                   <h2 class="weather-text-result">Weather will be: <span class="weather"></span></h2>
-                  <button class="button-print" id="print" href="#">Print booking</button>
-                  <button class="button-change" id="change" href="#">Change booking</button>
+                  <button id="generate" class="button-print" id="print" href="#">Print booking</button>
+                  <button id="delete" class="button-change" id="change" href="#">Change booking</button>
                 </div>
             </div>
         </section>
@@ -62,7 +63,7 @@
         <br>
         <br>
         <footer>
-            <button id="generate" class="btn">TOP</button>
+            <button class="btn">TOP</button>
             <div class="name">
                 <h5>Made by Andrea Scacchi</h5>
             </div>
