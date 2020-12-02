@@ -1,4 +1,3 @@
-
 // Geonames API and URL
 const geoNameURL = 'http://api.geonames.org/searchJSON?q=';
 const geoNameUsername = 'andreascacchi';
@@ -20,3 +19,29 @@ function theButton() {
     });
 }
 theButton();
+
+//Global variables
+const myTrip = document.querySelector(".planTheTrip");
+const myResult = document.getElementById("results");
+const theInput = document.getElementById("theSubmit");
+
+//Async function for the user Input
+async function handleSubmit(e) {
+    e.preventDefault();
+    const first_city = document.getElementById("firstCity").value;
+    const second_city = document.getElementById("secondCity").value;
+    const departing = document.getElementById("date1").value;
+    const arriving = document.getElementById("date2").value;
+
+    // Create a new date instance dynamically with JS
+    const d = new Date();
+    const newDate = d.getMonth()+'.'+ d.getDate()+'.'+ d.getFullYear();
+    console.log(newDate);
+
+    // Days to travel
+    const startTrip = new Date(departing);
+    const endTrip = new Date(arriving);
+    const tripDays = endTrip.geTime() - startTrip.getTime();
+    const daysToTravel = tripDays / (1000 * 3600 * 24);
+    console.log(daysToTravel);
+}
