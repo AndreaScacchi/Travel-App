@@ -64,7 +64,7 @@ input {
     color: #1a4301;
 }
 
-.search_trip {
+#theSubmit {
     display: inline;
     background: #ffffff;
     color: #000;
@@ -78,11 +78,29 @@ input {
     cursor: pointer;
     box-shadow: 0 3px #999;
 }
+/*.search_trip {
+    display: inline;
+    background: #ffffff;
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: oblique;
+    font-family: serif;
+    border: 5px solid black;
+    border-radius: 50px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 3px #999;
+}*/
 
-.search_trip:hover {
+#theSubmit:hover {
     background: #d00000;
     color: #000;
 }
+/*.search_trip:hover {
+    background: #d00000;
+    color: #000;
+}*/
 
 .MyResults {
     font-size: 22px;
@@ -232,7 +250,7 @@ input {
         color: #04a6c2;
     }
 
-    .search_trip {
+    #theSubmit {
         display: inline;
         background: #000;
         color: #ffd000;
@@ -246,11 +264,29 @@ input {
         cursor: pointer;
         box-shadow: 0 3px #780116;
     }
+    /*.search_trip {
+        display: inline;
+        background: #000;
+        color: #ffd000;
+        font-size: 7px;
+        font-weight: bold;
+        font-style: oblique;
+        font-family: serif;
+        border: 5px solid #014f86;
+        border-radius: 50px;
+        text-align: center;
+        cursor: pointer;
+        box-shadow: 0 3px #780116;
+    }*/
 
-    .search_trip:hover {
+    #theSubmit:hover {
         background: #3b28cc;
         color: #000;
     }
+    /*.search_trip:hover {
+        background: #3b28cc;
+        color: #000;
+    }*/
 
     .MyResults {
         font-size: 14px;
@@ -401,7 +437,7 @@ input {
         color: #9a031e;
     }
 
-    .search_trip {
+    #theSubmit {
         display: inline;
         background: #000;
         color: #bb9457;
@@ -415,11 +451,29 @@ input {
         cursor: pointer;
         box-shadow: 0 3px #263c41;
     }
+    /*.search_trip {
+        display: inline;
+        background: #000;
+        color: #bb9457;
+        font-size: 10px;
+        font-weight: bold;
+        font-style: normal;
+        font-family: cursive;
+        border: 5px solid #d3d3d3;
+        border-radius: 50px;
+        text-align: center;
+        cursor: pointer;
+        box-shadow: 0 3px #263c41;
+    }*/
 
-    .search_trip:hover {
+    #theSubmit:hover {
         background: #b76935;
         color: #00a896;
     }
+    /*.search_trip:hover {
+        background: #b76935;
+        color: #00a896;
+    }*/
 
     .MyResults {
         font-size: 17px;
