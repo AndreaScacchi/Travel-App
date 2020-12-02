@@ -35,7 +35,7 @@ function addData(req, res) {
     journeyData['departing'] = req.body.departing;
     journeyData['arriving'] = req.body.arriving;
     journeyData['date'] = req.body.tripDate;
+    journeyData['daysToJourney'] = req.body.daysToJourney;
     journeyData['weather'] = req.body.weather;
-    journeyData['temperature'] = req.body.temperature;
     res.send(journeyData);
 }
