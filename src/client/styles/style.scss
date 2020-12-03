@@ -132,7 +132,7 @@ input {
     color: #70e000;
 }
 
-.button-print, .button-change {
+.button-print, .button-delete {
     display: inline;
     background: #ffffff;
     color: #000;
@@ -152,7 +152,7 @@ input {
     color: #00b4d8;
 }
 
-.button-change:hover {
+.button-delete:hover {
     background: #000;
     color: #e85d04;
 }
@@ -318,7 +318,7 @@ input {
         color: #d6cfcb;
     }
 
-    .button-print, .button-change {
+    .button-print, .button-delete {
         display: inline;
         background: #000;
         color: #ffd000;
@@ -338,7 +338,7 @@ input {
         color: #03045e;
     }
 
-    .button-change:hover {
+    .button-delete:hover {
         background: #b7b7a4;
         color: #245501;
     }
@@ -505,7 +505,7 @@ input {
         color: #9d0208;
     }
 
-    .button-print, .button-change {
+    .button-print, .button-delete {
         display: inline;
         background: #000;
         color: #008000;
@@ -525,7 +525,7 @@ input {
         color: #fca311;
     }
 
-    .button-change:hover {
+    .button-delete:hover {
         background: #b5179e;
         color: #000;
     }
