@@ -20,6 +20,12 @@ function theButton() {
 }
 theButton();
 
+//Variables for the local storage
+const form = document.querySelector('form')
+const ul = document.querySelector('ul')
+const button = document.querySelector('button')
+const input = document.getElementById('item')
+
 //Global variables
 const myTrip = document.querySelector(".planTheTrip");
 const myResult = document.getElementById("results");
@@ -34,8 +40,8 @@ document.getElementById("print").addEventListener("click", handleSubmit);
 document.getElementById("delete").addEventListener("click", handleSubmit);
 
 //Async function for the user Input
-async function handleSubmit(e) {
-    e.preventDefault();
+function handleSubmit() {
+    event.preventDefault();
     const first_city = document.getElementById("firstCity").value;
     const second_city = document.getElementById("secondCity").value;
     const departing = document.getElementById("date1").value;
@@ -63,7 +69,7 @@ async function handleSubmit(e) {
 
 }
 
-    const getCity = async (geoNameURL, second_city, geoNameUsername) => {
+    const getCityInfo = async (geoNameURL, second_city, geoNameUsername) => {
         const response = await fetch(geoNameURL + second_city + "username" + geoNameUsername);
         try {
             const cityData = await response.json();
@@ -148,16 +154,16 @@ async function handleSubmit(e) {
     const weatherData = getWeather(latitude, longitude, country)
     return weatherData;*/
 
-document.addEventListener('DOMContentLoaded', (event) => {
+/*document.addEventListener('DOMContentLoaded', (event) => {
     event.preventDefault();
 
     const printTrip = document.getElementById('')
-})
+})*/
 
 export {
     handleSubmit,
     theButton,
-    getCity,
+    getCityInfo,
     getWeather,
     showTrip
 }
