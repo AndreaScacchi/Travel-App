@@ -11,14 +11,21 @@
         </section>
         <br>
         <hr>
-        <section id="MyJourney">
-            <div class="the_trip">
-                <form class="form_content" onsubmit="return Client.handleSubmit(event)">
-                  <h2 class="form-text">Plan your trip!</h2>
-                </form>
-            </div>
-        </section>
-        <div class="planTheTrip">
+        <div class="card">
+            <section id="MyJourney">
+                <div class="the_trip">
+                    <form class="form_content" id="form" onsubmit="return Client.handleSubmit(event)">
+                        <img src="https://pixabay.com/it/photos/londra-heathrow-aviazione-aeroporto-726443/" alt="London Heathrow">
+                        <h2 class="form-text">Plan your trip!</h2>
+                        <input type="text" id="input_from" name="from" placeholder="Departing" autocomplete="off" required>
+                        <input type="text" id="input_to" name="to" placeholder="Arriving" autocomplete="off" required>
+                        <input type="date" id="input_date" name="date" required>
+                        <button type="submit" class="button_submit" name="submit" value="Submit">Search</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+        <!-- <div class="planTheTrip">
             <div class="plan_trip">
                 <div class="from"><label for="firstCity">From:</label></div>
                 <div class="from1"><input type="text" id="firstCity" placeholder="Departure"></div>
@@ -29,7 +36,7 @@
                 <div class="to1"><input type="text" id="secondCity" placeholder="Destination"/></div>
             </div>
             <br>
-            <div class="plan_trip">
+            <div class="plan_trip"  >
                 <div class="dep"><label for="date1">Departing:</label></div>
                 <div class="dep1"><input type="text" id="date1" placeholder="DD/MM/YYYY" onfocus="(this.type='date')" onblur="(this.type='text')" /></div>
             </div>
@@ -40,20 +47,15 @@
             </div>
             <br>
             <input type="submit" id="theSubmit" class="the_submit" name="submit" value="Submit">
-            <!-- <button class="search_trip" id="the_search" href="#">Search</button>-->
-        </div>
+            <button class="search_trip" id="the_search" href="#">Search</button>
+        </div>-->
         <br>
         <hr>
-        <section id="results">
+        <section id="results" class="result_invisible">
             <div class="the_results">
-                <div class="get-image">
-                    <img alt="destination" class="pixabay_image">
-                </div>
                 <div class="MyResults">
-                    <h2 class="departing-text-result">From: <span class="departing"></span></h2>
-                    <h2 class="arriving-text-result">To: <span class="arriving"></span></h2>
-                    <h2 class="datee1-text-result">Departing date: <span class="first_date"></span></h2>
-                    <h2 class="datee2-text-result">Arriving date: <span class="second_date"></span></h2>
+                    <h2 class="city-text-result">Destination: <span class="city"></span></h2>
+                    <h2 class="date-text-result">Departing: <span class="date"></span></h2>
                     <h2 class="days-text-result">Trip starts in: <span class="days"></span></h2>
                     <h2 class="weather-text-result">Weather will be: <span class="weather"></span></h2>
                     <button class="button-print" id="print" href="#">Print booking</button>
@@ -71,5 +73,14 @@
                 <h5>Made by Andrea Scacchi</h5>
             </div>
         </footer>
+        <script>
+            // Check that service workers are supported
+            if ('serviceWorker' in navigator) {
+                // Use the window load event to keep the page load performant
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js');
+                });
+            }
+        </script>
     </body>
 </html>
