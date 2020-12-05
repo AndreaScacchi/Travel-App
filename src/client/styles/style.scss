@@ -19,6 +19,13 @@ body {
     color: #adb5bd;
 }
 
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+}
+
 .form-text {
     font-size: 2em;
     font-style: italic;
@@ -36,35 +43,35 @@ input {
     border: 5px solid black;
 }
 
-.from {
+#input_from {
     font-size: 20px;
     font-style: italic;
     font-family: fantasy;
     color: #dddf00;
 }
 
-.to {
+#input_to {
     font-size: 20px;
     font-style: italic;
     font-family: fantasy;
     color: #5e60ce;
 }
 
-.dep {
+/*.dep {
     font-size: 20px;
     font-style: italic;
     font-family: fantasy;
     color: #370617;
-}
+}*/
 
-.arr {
+#input_date {
     font-size: 20px;
     font-style: italic;
     font-family: fantasy;
     color: #1a4301;
 }
 
-#theSubmit {
+.button_submit {
     display: inline;
     background: #ffffff;
     color: #000;
@@ -93,7 +100,7 @@ input {
     box-shadow: 0 3px #999;
 }*/
 
-#theSubmit:hover {
+.button_submit:hover {
     background: #d00000;
     color: #000;
 }
@@ -108,19 +115,19 @@ input {
     font-family: cursive;
 }
 
-.departing-text-result {
+/*.departing-text-result {
     color: #d00000;
-}
+}*/
 
-.arriving-text-result {
+.city-text-result {
     color: #ffba08;
 }
 
-.datee1-text-result {
+/*.datee1-text-result {
     color: #d23af0;
-}
+}*/
 
-.datee2-text-result {
+.date-text-result {
     color: #00b4d8;
 }
 
@@ -222,35 +229,35 @@ input {
         border: 5px solid #bc00dd;
     }
 
-    .from {
+    #input_from {
         font-size: 12px;
         font-style: oblique;
         font-family: cursive;
         color: #ffffff;
     }
 
-    .to {
+    #input_to {
         font-size: 12px;
         font-style: oblique;
         font-family: cursive;
         color: #9a031e;
     }
 
-    .dep {
+    /*.dep {
         font-size: 12px;
         font-style: oblique;
         font-family: cursive;
         color: #00171f;
-    }
+    }*/
 
-    .arr {
+    #input_date {
         font-size: 12px;
         font-style: oblique;
         font-family: cursive;
         color: #04a6c2;
     }
 
-    #theSubmit {
+    .button_submit {
         display: inline;
         background: #000;
         color: #ffd000;
@@ -279,7 +286,7 @@ input {
         box-shadow: 0 3px #780116;
     }*/
 
-    #theSubmit:hover {
+    .button_submit:hover {
         background: #3b28cc;
         color: #000;
     }
@@ -294,19 +301,19 @@ input {
         font-family: sans-serif;
     }
 
-    .departing-text-result {
+    /*.departing-text-result {
         color: #723d46;
-    }
+    }*/
 
-    .arriving-text-result {
+    .city-text-result {
         color: #2a3d45;
     }
 
-    .datee1-text-result {
+    /*.datee1-text-result {
         color: #e36414;
-    }
+    }*/
 
-    .datee2-text-result {
+    .date-text-result {
         color: #5c4d3c;
     }
 
@@ -409,35 +416,35 @@ input {
         border: 5px solid #5390d9;
     }
 
-    .from {
+    #input_from {
         font-size: 15px;
         font-style: oblique;
         font-family: cursive;
         color: #277da1;
     }
 
-    .to {
+    #input_to {
         font-size: 15px;
         font-style: oblique;
         font-family: cursive;
         color: #4a4e69;
     }
 
-    .dep {
+    /*.dep {
         font-size: 15px;
         font-style: oblique;
         font-family: cursive;
         color: #2d6a4f;
-    }
+    }*/
 
-    .arr {
+    #input_date {
         font-size: 15px;
         font-style: oblique;
         font-family: cursive;
         color: #9a031e;
     }
 
-    #theSubmit {
+    .button_submit {
         display: inline;
         background: #000;
         color: #bb9457;
@@ -466,7 +473,7 @@ input {
         box-shadow: 0 3px #263c41;
     }*/
 
-    #theSubmit:hover {
+    .button_submit:hover {
         background: #b76935;
         color: #00a896;
     }
@@ -481,19 +488,19 @@ input {
         font-family: serif;
     }
 
-    .departing-text-result {
+    /*.departing-text-result {
         color: #706677;
-    }
+    }*/
 
-    .arriving-text-result {
+    .city-text-result {
         color: #a7c957;
     }
 
-    .datee1-text-result {
+    /*.datee1-text-result {
         color: #081c15;
-    }
+    }*/
 
-    .datee2-text-result {
+    .date-text-result {
         color: #ffe8d6;
     }
 
