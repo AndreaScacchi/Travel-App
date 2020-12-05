@@ -24,8 +24,12 @@ function listening() {
 };
 
 // GET route
-app.get('/', function (req, res) {
+app.get('/all', function (req, res) {
     res.sendFile('dist/index.html')
+})
+
+app.get('/test', async (request, response) => {
+    response.json();
 })
 
 // POST route
