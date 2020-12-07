@@ -26,9 +26,7 @@ body {
 
 .card {
     display: flex;
-    //background: #f7f7f7cc;
     flex-direction: column;
-    //box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     height: 50vh;
     width: 50vw;
     margin: auto;
@@ -74,13 +72,6 @@ input {
     color: #5e60ce;
 }
 
-/*.dep {
-    font-size: 20px;
-    font-style: italic;
-    font-family: fantasy;
-    color: #370617;
-}*/
-
 #input_date {
     font-size: 20px;
     font-style: italic;
@@ -105,29 +96,11 @@ input {
     cursor: pointer;
     box-shadow: 0 3px #999;
 }
-/*.search_trip {
-    display: inline;
-    background: #ffffff;
-    color: #000;
-    font-size: 14px;
-    font-weight: bold;
-    font-style: oblique;
-    font-family: serif;
-    border: 5px solid black;
-    border-radius: 50px;
-    text-align: center;
-    cursor: pointer;
-    box-shadow: 0 3px #999;
-}*/
 
 .button_submit:hover {
     background: #d00000;
     color: #000;
 }
-/*.search_trip:hover {
-    background: #d00000;
-    color: #000;
-}*/
 
 .MyResults {
     font-size: 22px;
@@ -135,17 +108,9 @@ input {
     font-family: cursive;
 }
 
-/*.departing-text-result {
-    color: #d00000;
-}*/
-
 .city-text-result {
     color: #ffba08;
 }
-
-/*.datee1-text-result {
-    color: #d23af0;
-}*/
 
 .date-text-result {
     color: #00b4d8;
@@ -212,7 +177,6 @@ input {
 
 @media (max-width: 500px) {
     body {
-        //background: #aacc00;
         background-image: url(https://cdn.pixabay.com/photo/2015/07/11/23/02/plane-841441_1280.jpg);
         height: 100%;
         background-position: center;
@@ -239,9 +203,7 @@ input {
 
     .card {
         display: flex;
-        //background: #f7f7f7cc;
         flex-direction: column;
-        //box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
         height: 50vh;
         width: 50vw;
         margin: auto;
@@ -287,13 +249,6 @@ input {
         color: #9a031e;
     }
 
-    /*.dep {
-        font-size: 12px;
-        font-style: oblique;
-        font-family: cursive;
-        color: #00171f;
-    }*/
-
     #input_date {
         font-size: 12px;
         font-style: oblique;
@@ -318,29 +273,11 @@ input {
         cursor: pointer;
         box-shadow: 0 3px #780116;
     }
-    /*.search_trip {
-        display: inline;
-        background: #000;
-        color: #ffd000;
-        font-size: 7px;
-        font-weight: bold;
-        font-style: oblique;
-        font-family: serif;
-        border: 5px solid #014f86;
-        border-radius: 50px;
-        text-align: center;
-        cursor: pointer;
-        box-shadow: 0 3px #780116;
-    }*/
 
     .button_submit:hover {
         background: #ffd000;
         color: #000;
     }
-    /*.search_trip:hover {
-        background: #3b28cc;
-        color: #000;
-    }*/
 
     .MyResults {
         font-size: 14px;
@@ -348,17 +285,9 @@ input {
         font-family: sans-serif;
     }
 
-    /*.departing-text-result {
-        color: #723d46;
-    }*/
-
     .city-text-result {
         color: #2a3d45;
     }
-
-    /*.datee1-text-result {
-        color: #e36414;
-    }*/
 
     .date-text-result {
         color: #5c4d3c;
@@ -426,7 +355,6 @@ input {
 
 @media (min-width: 501px) and (max-width: 750px) {
     body {
-        //background: #ff6000;
         background-image: url(https://cdn.pixabay.com/photo/2015/07/11/23/02/plane-841441_1280.jpg);
         height: 100%;
         background-position: center;
@@ -453,9 +381,7 @@ input {
 
     .card {
         display: flex;
-        //background: #f7f7f7cc;
         flex-direction: column;
-        //box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
         height: 50vh;
         width: 50vw;
         margin: auto;
@@ -502,13 +428,6 @@ input {
         color: #4a4e69;
     }
 
-    /*.dep {
-        font-size: 15px;
-        font-style: oblique;
-        font-family: cursive;
-        color: #2d6a4f;
-    }*/
-
     #input_date {
         font-size: 15px;
         font-style: oblique;
@@ -533,29 +452,11 @@ input {
         cursor: pointer;
         box-shadow: 0 3px #263c41;
     }
-    /*.search_trip {
-        display: inline;
-        background: #000;
-        color: #bb9457;
-        font-size: 10px;
-        font-weight: bold;
-        font-style: normal;
-        font-family: cursive;
-        border: 5px solid #d3d3d3;
-        border-radius: 50px;
-        text-align: center;
-        cursor: pointer;
-        box-shadow: 0 3px #263c41;
-    }*/
 
     .button_submit:hover {
         background: #b76935;
         color: #00a896;
     }
-    /*.search_trip:hover {
-        background: #b76935;
-        color: #00a896;
-    }*/
 
     .MyResults {
         font-size: 17px;
@@ -563,17 +464,9 @@ input {
         font-family: serif;
     }
 
-    /*.departing-text-result {
-        color: #706677;
-    }*/
-
     .city-text-result {
         color: #0b525b;
     }
-
-    /*.datee1-text-result {
-        color: #081c15;
-    }*/
 
     .date-text-result {
         color: #ffe8d6;
