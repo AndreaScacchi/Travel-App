@@ -108,6 +108,82 @@ function handleSubmit() {
         }
     }
 
+    //The countdown
+    const countDownDate = new Date("Jan 5, 2021 15:37:25").getTime();
+
+    const x = setInterval(function() {
+        const now = new Date().getTime();
+        const distance = countDownDate - now;
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+        + minutes + "m " + seconds + "s";
+
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "BON VOYAGE";
+        }
+    }, 1000);
+
+    // Create a "close" button and append it to each list item
+    const myNodelist = document.getElementsByTagName("LI");
+    const i;
+    for (i = 0; i < myNodelist.length; i++) {
+        const span = document.createElement("SPAN");
+        const txt = document.createTextNode("\u00D7");
+        span.className = "close";
+        span.appendChild(txt);
+        myNodelist[i].appendChild(span);
+    }
+
+    // Click on a close button to hide the current list item
+    const close = document.getElementsByClassName("close");
+    const i;
+    for (i = 0; i < close.length; i++) {
+        close[i].onclick = function() {
+            const div = this.parentElement;
+            div.style.display = "none";
+        }
+    }
+
+    // Add a "checked" symbol when clicking on a list item
+    const list = document.querySelector('ul');
+    list.addEventListener('click', function(ev) {
+        if (ev.target.tagName === 'LI') {
+            ev.target.classList.toggle('checked');
+        }
+    }, false);
+
+    // Create a new list item when clicking on the "Add" button
+    function newElement() {
+        const li = document.createElement("li");
+        const inputValue = document.getElementById("myInput").value;
+        const t = document.createTextNode(inputValue);
+        li.appendChild(t);
+        if (inputValue === '') {
+            alert("You must write something!");
+        } else {
+            document.getElementById("myUL").appendChild(li);
+        }
+        document.getElementById("myInput").value = "";
+
+        const span = document.createElement("SPAN");
+        const txt = document.createTextNode("\u00D7");
+        span.className = "close";
+        span.appendChild(txt);
+        li.appendChild(span);
+
+        for (i = 0; i < close.length; i++) {
+            close[i].onclick = function() {
+                const div = this.parentElement;
+                div.style.display = "none";
+            }
+        }
+    }
+
     //Update UI demo
     const updateUI = async() => {
         const request = await fetch('/all')
@@ -125,5 +201,7 @@ function handleSubmit() {
 
 export {
     handleSubmit,
-    theButton
+    theButton,
+    countDownDate,
+    newElement
 }
