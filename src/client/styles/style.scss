@@ -1,6 +1,11 @@
 body {
-    background: #0b525b;
+    //background: #0b525b;
+    background-image: url(https://cdn.pixabay.com/photo/2015/07/11/23/02/plane-841441_1280.jpg);
     color: #000;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #traveling {
@@ -16,17 +21,27 @@ body {
 
 .WhyTravel {
     font-size: 3em;
-    color: #adb5bd;
+    color: #14213d;
 }
 
 .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 300px;
+    display: flex;
+    //background: #f7f7f7cc;
+    flex-direction: column;
+    //box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    height: 50vh;
+    width: 50vw;
     margin: auto;
     text-align: center;
+    align-items: center;
 }
 
 .form-text {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.4rem;
+    margin-bottom: 0.7rem;
+    text-align: center;
     font-size: 2em;
     font-style: italic;
     font-family: cursive;
@@ -34,10 +49,12 @@ body {
 }
 
 input {
-    display: inline;
     background: #ffffff;
     color: #000;
     font-size: 14px;
+    margin-top: 1.5rem;
+    margin-left: 1rem;
+    padding: 14px 11px;
     font-style: oblique;
     font-family: serif;
     border: 5px solid black;
@@ -76,11 +93,14 @@ input {
     background: #ffffff;
     color: #000;
     font-size: 14px;
+    margin-top: 1.5rem;
+    width: 100px;
     font-weight: bold;
     font-style: oblique;
     font-family: serif;
     border: 5px solid black;
     border-radius: 50px;
+    align-items: baseline;
     text-align: center;
     cursor: pointer;
     box-shadow: 0 3px #999;
@@ -132,7 +152,7 @@ input {
 }
 
 .days-text-result {
-    color: #a5a58d;
+    color: #9d0208;
 }
 
 .weather-text-result {
@@ -187,18 +207,23 @@ input {
     font-size: 1.5em;
     font-family: monospace;
     text-align: right;
-    color: #f4f0bb;
+    color: #000;
 }
 
 @media (max-width: 500px) {
     body {
-        background: #aacc00;
-        color: #126782;
+        //background: #aacc00;
+        background-image: url(https://cdn.pixabay.com/photo/2015/07/11/23/02/plane-841441_1280.jpg);
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: #fd9e02;
     }
 
     #traveling {
         text-align: center;
-        font-size: 12px;
+        font-size: 14px;
         margin-left: 100px;
         margin-right: 100px;
         margin-top: 55px;
@@ -208,19 +233,38 @@ input {
     }
 
     .WhyTravel {
-        font-size: 1.2em;
+        font-size: 1.4em;
         color: #dc2f02;
     }
 
+    .card {
+        display: flex;
+        //background: #f7f7f7cc;
+        flex-direction: column;
+        //box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        height: 50vh;
+        width: 50vw;
+        margin: auto;
+        text-align: center;
+        align-items: center;
+    }
+
     .form-text {
-        font-size: 1em;
+        display: flex;
+        flex-direction: column;
+        margin-top: 0.4rem;
+        margin-bottom: 0.7rem;
+        text-align: center;
+        font-size: 1.4em;
         font-style: normal;
         font-family: monospace;
         color: #000;
     }
 
     input {
-        display: inline;
+        margin-top: 1.5rem;
+        margin-left: 1rem;
+        padding: 14px 11px;
         background: #000;
         color: #e5e5e5;
         font-size: 10px;
@@ -258,6 +302,9 @@ input {
     }
 
     .button_submit {
+        align-items: baseline;
+        margin-top: 1.5rem;
+        width: 100px;
         display: inline;
         background: #000;
         color: #ffd000;
@@ -287,7 +334,7 @@ input {
     }*/
 
     .button_submit:hover {
-        background: #3b28cc;
+        background: #ffd000;
         color: #000;
     }
     /*.search_trip:hover {
@@ -373,14 +420,19 @@ input {
         font-size: 0.5em;
         font-family: inherit;
         text-align: right;
-        color: #ff7900;
+        color: #005c00;
     }
 }
 
 @media (min-width: 501px) and (max-width: 750px) {
     body {
-        background: #ff6000;
-        color: #b1a7a6;
+        //background: #ff6000;
+        background-image: url(https://cdn.pixabay.com/photo/2015/07/11/23/02/plane-841441_1280.jpg);
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: #4ea8de;
     }
 
     #traveling {
@@ -399,7 +451,25 @@ input {
         color: #144552;
     }
 
+    .card {
+        display: flex;
+        //background: #f7f7f7cc;
+        flex-direction: column;
+        //box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        height: 50vh;
+        width: 50vw;
+        margin: auto;
+        text-align: center;
+        align-items: center;
+    }
+
+
     .form-text {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0.4rem;
+        margin-bottom: 0.7rem;
+        text-align: center;
         font-size: 1.5em;
         font-style: oblique;
         font-family: sans-serif;
@@ -407,7 +477,9 @@ input {
     }
 
     input {
-        display: inline;
+        margin-top: 1.5rem;
+        margin-left: 1rem;
+        padding: 14px 11px;
         background: #cd9777;
         color: #000;
         font-size: 12px;
@@ -445,6 +517,9 @@ input {
     }
 
     .button_submit {
+        align-items: baseline;
+        margin-top: 1.5rem;
+        width: 100px;
         display: inline;
         background: #000;
         color: #bb9457;
@@ -493,7 +568,7 @@ input {
     }*/
 
     .city-text-result {
-        color: #a7c957;
+        color: #0b525b;
     }
 
     /*.datee1-text-result {
@@ -533,7 +608,7 @@ input {
     }
 
     .button-delete:hover {
-        background: #b5179e;
+        background: #008000;
         color: #000;
     }
 
