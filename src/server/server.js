@@ -28,8 +28,8 @@ app.get('/all', function (req, res) {
     res.sendFile('dist/index.html')
 })
 
-app.get('/test', async (request, response) => {
-    response.json();
+app.get('/test', async (req, res) => {
+    res.json();
 })
 
 // POST route
