@@ -10,6 +10,6 @@ In this project I used:
 - **NPM**
 - **Webpack**
 
-Moreover, I want to Thanks the community that is full of developers that help you anytime, and also the mentors, that are a fundamental part to reach the goals and understand how to face and fix the problems!
+Moreover, I want to Thanks the community that is full of developers that help you anytime, and also the mentors and the reviewers, that are a fundamental part to reach the goals and understand how to face and fix the problems!
 
 
