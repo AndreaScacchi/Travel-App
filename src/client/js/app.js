@@ -25,7 +25,9 @@ const myTrip = document.querySelector("#form");
 const myResult = document.getElementById("results");
 const dateNow = (Date.now()) / 1000;
 const theInput = document.querySelector(".button_submit");
+const addBtn = document.querySelector('.addBtn');
 
+addBtn.addEventListener('click', newElement);
 theInput.addEventListener("click", handleSubmit);
 document.getElementById("print").addEventListener("click", handleSubmit);
 document.getElementById("delete").addEventListener("click", handleSubmit);
@@ -130,7 +132,7 @@ function handleSubmit() {
 
     // Create a "close" button and append it to each list item
     const myNodelist = document.getElementsByTagName("LI");
-    const i;
+    let i;
     for (i = 0; i < myNodelist.length; i++) {
         const span = document.createElement("SPAN");
         const txt = document.createTextNode("\u00D7");
@@ -141,7 +143,6 @@ function handleSubmit() {
 
     // Click on a close button to hide the current list item
     const close = document.getElementsByClassName("close");
-    const i;
     for (i = 0; i < close.length; i++) {
         close[i].onclick = function() {
             const div = this.parentElement;
