@@ -10,6 +10,9 @@ const weatherBitKey = '1600fb6105a9450c851786ab67eb4437';
 const pixaBayURL = 'https://pixabay.com/api/?key=';
 const pixaBayKey = '19344538-371102874db6349622a031d1a';
 
+// form submit
+form.addEventListener('submit', handleSubmit);
+
 // Button function
 const myButton = document.querySelector(".btn");
 
@@ -21,8 +24,8 @@ function theButton() {
 theButton();
 
 //Global variables
-const myTrip = document.querySelector("#form");
-const myResult = document.getElementById("results");
+const form = document.querySelector("#form");
+const result = document.getElementById("results");
 const dateNow = (Date.now()) / 1000;
 const theInput = document.querySelector(".button_submit");
 const addBtn = document.querySelector('.addBtn');
@@ -67,142 +70,147 @@ function handleSubmit() {
         const daysToTravel = Math.round((newDate - dateNow) / 86400);
         const theData = postTravelData('http://localhost8080/add', { departing, arriving, travelDate, weather: weatherData.data[0].high_temp, daysToTravel });
         return theData;
+    }).then((userData) => {
+        updateUI(userData);
     })
+};
 
-}
-
-    const getCityInfo = async (geoNameURL, arriving, geoNameUsername) => {
-        const response = await fetch(geoNameURL + arriving + "username" + geoNameUsername);
-        try {
-            const cityInfo = await response.json();
-            return cityInfo;
-        } catch (error) {
-            console.log("error", error);
-        }
-    };
-
-    const getWeather = async (latitude, longitude) => {
-        const response = await fetch(weatherBitURL + "lat=" + latitude + "&lon=" + longitude + "&key=" + weatherBitKey);
-        try {
-            const weatherInfo = await response.json();
-            return weatherInfo;
-        } catch (error) {
-            console.log("error", error);
-        }
-    };
-
-    const postTravelData = async (url ='', data = {}) => {
-        const response = await fetch(url, {
-            method: "POST",
-            credentials: "same-origin",
-            headers: {
-                "Content-Type": "application/json;"
-            },
-            body: JSON.stringify(data),
-        });
-
-        try {
-            const newData = await response.json();
-            console.log(newData);
-            return newData;
-        } catch (error) {
-            console.log("error", error);
-        }
+const getCityInfo = async (geoNameURL, arriving, geoNameUsername) => {
+    const response = await fetch(geoNameURL + arriving + "username" + geoNameUsername);
+    try {
+        const cityInfo = await response.json();
+        return cityInfo;
+    } catch (error) {
+        console.log("error", error);
     }
+};
 
-    //The countdown
-    const countDownDate = new Date("Jan 5, 2021 15:37:25").getTime();
-
-    const x = setInterval(function() {
-        const now = new Date().getTime();
-        const distance = countDownDate - now;
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-        + minutes + "m " + seconds + "s";
-
-        if (distance < 0) {
-            clearInterval(x);
-            document.getElementById("demo").innerHTML = "BON VOYAGE";
-        }
-    }, 1000);
-
-    // Create a "close" button and append it to each list item
-    const myNodelist = document.getElementsByTagName("LI");
-    let i;
-    for (i = 0; i < myNodelist.length; i++) {
-        const span = document.createElement("SPAN");
-        const txt = document.createTextNode("\u00D7");
-        span.className = "close";
-        span.appendChild(txt);
-        myNodelist[i].appendChild(span);
+const getWeather = async (latitude, longitude) => {
+    const response = await fetch(weatherBitURL + "lat=" + latitude + "&lon=" + longitude + "&key=" + weatherBitKey);
+    try {
+        const weatherInfo = await response.json();
+        return weatherInfo;
+    } catch (error) {
+        console.log("error", error);
     }
+};
 
-    // Click on a close button to hide the current list item
-    const close = document.getElementsByClassName("close");
+const postTravelData = async (url ='', data = {}) => {
+    const response = await fetch(url, {
+        method: "POST",
+        credentials: "same-origin",
+        headers: {
+            "Content-Type": "application/json;"
+        },
+        body: JSON.stringify(data),
+    });
+
+    try {
+        const newData = await response.json();
+        console.log(newData);
+        return newData;
+    } catch (error) {
+        console.log("error", error);
+    }
+};
+
+//The countdown
+const countDownDate = new Date("Jan 5, 2021 15:37:25").getTime();
+
+const x = setInterval(function() {
+    const now = new Date().getTime();
+    const distance = countDownDate - now;
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+    + minutes + "m " + seconds + "s";
+
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "BON VOYAGE";
+    }
+}, 1000);
+
+// Create a "close" button and append it to each list item
+const myNodelist = document.getElementsByTagName("LI");
+let i;
+for (i = 0; i < myNodelist.length; i++) {
+    const span = document.createElement("SPAN");
+    const txt = document.createTextNode("\u00D7");
+    span.className = "close";
+    span.appendChild(txt);
+    myNodelist[i].appendChild(span);
+};
+
+// Click on a close button to hide the current list item
+const close = document.getElementsByClassName("close");
+for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+        const div = this.parentElement;
+        div.style.display = "none";
+    }
+};
+
+// Add a "checked" symbol when clicking on a list item
+const list = document.querySelector('ul');
+list.addEventListener('click', function(ev) {
+    if (ev.target.tagName === 'LI') {
+        ev.target.classList.toggle('checked');
+    }
+}, false);
+
+// Create a new list item when clicking on the "Add" button
+function newElement() {
+    const li = document.createElement("li");
+    const inputValue = document.getElementById("myInput").value;
+    const t = document.createTextNode(inputValue);
+    li.appendChild(t);
+    if (inputValue === '') {
+        alert("You must write something!");
+    } else {
+        document.getElementById("myUL").appendChild(li);
+    }
+    document.getElementById("myInput").value = "";
+
+    const span = document.createElement("SPAN");
+    const txt = document.createTextNode("\u00D7");
+    span.className = "close";
+    span.appendChild(txt);
+    li.appendChild(span);
+
     for (i = 0; i < close.length; i++) {
         close[i].onclick = function() {
             const div = this.parentElement;
             div.style.display = "none";
         }
     }
+};
 
-    // Add a "checked" symbol when clicking on a list item
-    const list = document.querySelector('ul');
-    list.addEventListener('click', function(ev) {
-        if (ev.target.tagName === 'LI') {
-            ev.target.classList.toggle('checked');
-        }
-    }, false);
-
-    // Create a new list item when clicking on the "Add" button
-    function newElement() {
-        const li = document.createElement("li");
-        const inputValue = document.getElementById("myInput").value;
-        const t = document.createTextNode(inputValue);
-        li.appendChild(t);
-        if (inputValue === '') {
-            alert("You must write something!");
-        } else {
-            document.getElementById("myUL").appendChild(li);
-        }
-        document.getElementById("myInput").value = "";
-
-        const span = document.createElement("SPAN");
-        const txt = document.createTextNode("\u00D7");
-        span.className = "close";
-        span.appendChild(txt);
-        li.appendChild(span);
-
-        for (i = 0; i < close.length; i++) {
-            close[i].onclick = function() {
-                const div = this.parentElement;
-                div.style.display = "none";
-            }
-        }
+//Update UI demo
+const updateUI = async(userData) => {
+    result.classList.remove('hidden');
+    form.classList.add('hidden');
+    const response = await fetch(pixaBayURL + pixaBayKey + "&q" + userData.arriving + "city&image_type=photo");
+    try {
+        const getImage = await response.json();
+        //console.log(allData);
+        document.getElementById('city').innerHTML = userData.arriving;
+        document.getElementById('date').innerHTML = userData.travelDate;
+        document.getElementById('days').innerHTML = userData.daysToTravel;
+        document.getElementById('weather').innerHTML = Math.round(userData.weather * 9 / 5 + 32)+ "&deg;F";
+        document.querySelector('.pixabay-image').setAttribute('src', getImage.hits[0].webformatURL);
+    } catch (error) {
+        console.log("error", error);
     }
-
-    //Update UI demo
-    const updateUI = async() => {
-        const request = await fetch('/all')
-        try {
-            const allData = await request.json()
-            //console.log(allData);
-            document.getElementById('city').innerHTML = allData.city;
-            document.getElementById('date').innerHTML = allData.date;
-            document.getElementById('days').innerHTML = allData.days;
-            document.getElementById('weather').innerHTML = allData.weather;
-        } catch (error) {
-            console.log("error", error);
-        }
-    }
+};
 
 export {
     handleSubmit,
     theButton,
+    updateUI,
     countDownDate,
     newElement
 }
