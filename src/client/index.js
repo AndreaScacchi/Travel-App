@@ -12,12 +12,31 @@ document.addEventListener('DOMContentLoaded', (event) => {
     event.preventDefault();
 
     const print = document.getElementById('print');
-    const delete = document.getElementById('delete');
+    const cancel = document.getElementById('delete');
     const submit = document.getElementById('button_submit');
     const add = document.querySelector('.addBtn');
-})
 
-function ShowAndHide() {
+    print.addEventListener('click', function () {
+        window.print();
+        location.reload();
+    });
+
+    cancel.addEventListener('click', function () {
+        form.reset();
+        results.classList.add('hidden');
+        location.reload();
+    });
+
+    submit.addEventListener('submit', function () {
+        window.open("https://www.aircanada.com/")
+    });
+
+    add.addEventListener('click', function () {
+        alert('This is your to do list');
+    })
+}
+
+function showResults() {
     const x = document.getElementById('SectionName');
     if (x.style.display == 'none') {
         x.style.display = 'block';
@@ -30,6 +49,6 @@ export {
     handleSubmit,
     theButton,
     countDownDate,
-    ShowAndHide,
+    showResults,
     newElement
 }
