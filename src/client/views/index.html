@@ -20,14 +20,17 @@
                         <input type="text" id="input_from" name="from" placeholder="Departing" autocomplete="off" required>
                         <input type="text" id="input_to" name="to" placeholder="Arriving" autocomplete="off" required>
                         <input type="date" id="input_date" name="date" required>
-                        <button type="submit" onclick="ShowAndHide()" class="button_submit" name="submit" value="Submit">Search</button>
+                        <button type="submit" onclick="showResults" class="button_submit" name="submit" value="Submit">Search</button>
                     </form>
                 </div>
             </section>
         </div>
         <br>
-        <section id="results" class="result_invisible">
+        <section id="results" class="result_hidden">
             <div class="the_results">
+                <div class="result-image">
+                    <img alt="Destination" class="pixabay-image">
+                </div>
                 <div id="SectionName" class="MyResults">
                     <h2 class="city-text-result">Destination: <span class="city"></span></h2>
                     <h2 class="date-text-result">Departure date: <span class="date"></span></h2>
