@@ -25,7 +25,7 @@ function listening() {
 
 // GET route
 app.get('/all', function (req, res) {
-    res.sendFile('dist/index.html')
+    res.sendFile('dist/index.html');
 })
 
 app.get('/test', async (req, res) => {
