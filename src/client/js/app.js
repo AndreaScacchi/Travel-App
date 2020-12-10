@@ -68,7 +68,7 @@ function handleSubmit() {
     })
     .then((weatherData) => {
         const daysToTravel = Math.round((newDate - dateNow) / 86400);
-        const userData = postTravelData('http://localhost8080/add', { departing, arriving, travelDate, weather: weatherData.data[0].high_temp, daysToTravel });
+        const userData = postTravelData('http://localhost8080/', { departing, arriving, travelDate, weather: weatherData.data[0].high_temp, daysToTravel });
         return userData;
     }).then((userData) => {
         updateUI(userData);
