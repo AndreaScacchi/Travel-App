@@ -76,7 +76,7 @@ function handleSubmit() {
 };
 
 const getCityInfo = async (geoNameURL, arriving, geoNameUsername) => {
-    const response = await fetch(geoNameURL + arriving + "username" + geoNameUsername);
+    const response = await fetch(geoNameURL + arriving + "&username=" + geoNameUsername);
     try {
         const cityInfo = await response.json();
         return cityInfo;
