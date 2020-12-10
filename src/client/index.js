@@ -43,7 +43,7 @@ function showResults() {
     } else {
         x.style.display = 'none';
     }
-}
+};
 
 export {
     handleSubmit,
