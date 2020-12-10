@@ -11,7 +11,7 @@ const pixaBayURL = 'https://pixabay.com/api/?key=';
 const pixaBayKey = '19344538-371102874db6349622a031d1a';
 
 // form submit
-form.addEventListener('submit', handleSubmit);
+//form.addEventListener('submit', handleSubmit);
 
 // Button function
 const myButton = document.querySelector(".btn");
