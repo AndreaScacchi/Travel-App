@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     add.addEventListener('click', function () {
         alert('This is your to do list');
     })
-}
+});
 
 function showResults() {
     const x = document.getElementById('SectionName');
