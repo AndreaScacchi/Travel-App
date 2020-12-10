@@ -11,7 +11,7 @@ In this project I used:
 - **Webpack**
 
 Also:
-- **API** like:
+- **API's** like:
 * [GeoNames](https://www.geonames.org/) API in order to retrieve the destinations latitude and longitude. 
 * [Weatherbit](https://www.weatherbit.io/) API in order to retrieve the weather.
 * [Pixabay](https://pixabay.com/) API in order to retrieve a picture of destination city.
