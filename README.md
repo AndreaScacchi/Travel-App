@@ -16,7 +16,7 @@ Also:
 * [Weatherbit](https://www.weatherbit.io/) API in order to retrieve the weather.
 * [Pixabay](https://pixabay.com/) API in order to retrieve a picture of destination city.
 
-I created also a to do list, that seems a mini app inside the main app.
+I also created a to do list, that seems a mini app inside the main app.
 
 Moreover, I want to Thanks the community that is full of developers that help you anytime, and also the mentors and the reviewers, that are a fundamental part to reach the goals and understand how to face and fix the problems!
 
