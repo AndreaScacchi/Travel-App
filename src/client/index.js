@@ -4,9 +4,9 @@ import { countDownDate } from './js/app'
 import { newElement } from './js/app'
 import './styles/style.scss'
 
-document.getElementById('button_submit').addEventListener('click', handleSubmit);
+/*document.getElementById('button_submit').addEventListener('click', handleSubmit);
 document.getElementById('print').addEventListener('click', handleSubmit);
-document.getElementById('delete').addEventListener('click', handleSubmit);
+document.getElementById('delete').addEventListener('click', handleSubmit);*/
 
 document.addEventListener('DOMContentLoaded', (event) => {
     event.preventDefault();
@@ -27,13 +27,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
         location.reload();
     });
 
-    submit.addEventListener('submit', function () {
+    /*submit.addEventListener('submit', function () {
         window.open("https://www.aircanada.com/")
     });
 
     add.addEventListener('click', function () {
         alert('This is your to do list');
-    })
+    })*/
 });
 
 function showResults() {
