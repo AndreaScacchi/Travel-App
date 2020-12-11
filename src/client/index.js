@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     const print = document.getElementById('print');
     const cancel = document.getElementById('delete');
-    const submit = document.getElementById('button_submit');
+    //const submit = document.getElementById('button_submit');
     const add = document.querySelector('.addBtn');
 
     print.addEventListener('click', function () {
