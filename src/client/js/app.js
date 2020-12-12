@@ -56,7 +56,7 @@ function handleSubmit() {
         return
     }
 
-    const newDate = (new Date(arriving).getTime()) / 1000;
+    const newDate = (new Date(travelDate).getTime()) / 1000;
 
     getCityInfo(geoNameURL, arriving, geoNameUsername)
     .then((cityInfo) => {
@@ -68,7 +68,7 @@ function handleSubmit() {
     })
     .then((weatherData) => {
         const daysToTravel = Math.round((newDate - dateNow) / 86400);
-        const userData = postTravelData('http://localhost8080/', { departing, arriving, travelDate, weather: weatherData.data[0].high_temp, daysToTravel });
+        const userData = postTravelData('/add', { departing, arriving, travelDate, weather: weatherData.data[0].high_temp, daysToTravel });
         return userData;
     }).then((userData) => {
         updateUI(userData);
@@ -95,12 +95,12 @@ const getWeather = async (latitude, longitude) => {
     }
 };
 
-const postTravelData = async (url ='', data = {}) => {
+const postTravelData = async (url = '', data = {}) => {
     const response = await fetch(url, {
         method: "POST",
         credentials: "same-origin",
         headers: {
-            "Content-Type": "application/json;"
+            "Content-Type": "application/json",
         },
         body: JSON.stringify(data),
     });
@@ -115,7 +115,7 @@ const postTravelData = async (url ='', data = {}) => {
 };
 
 //The countdown
-const countDownDate = new Date("Jan 5, 2021 15:37:25").getTime();
+const countDownDate = new Date().getTime();
 
 const x = setInterval(function() {
     const now = new Date().getTime();
@@ -197,11 +197,11 @@ const updateUI = async(userData) => {
     try {
         const getImage = await response.json();
         //console.log(allData);
-        document.getElementById('city').innerHTML = userData.arriving;
-        document.getElementById('date').innerHTML = userData.travelDate;
-        document.getElementById('days').innerHTML = userData.daysToTravel;
-        document.getElementById('weather').innerHTML = Math.round(userData.weather * 9 / 5 + 32)+ "&deg;F";
-        document.querySelector('.pixabay-image').setAttribute('src', getImage.hits[0].webformatURL);
+        document.querySelector('.city').innerHTML = userData.arriving;
+        document.querySelector('.date').innerHTML = userData.travelDate;
+        document.querySelector('.days').innerHTML = userData.daysToTravel;
+        document.querySelector('.weather').innerHTML = Math.round(userData.weather * 9 / 5 + 32)+ "&deg;F";
+        //document.querySelector('.pixabay-image').setAttribute('src', getImage.hits[0].webformatURL);
     } catch (error) {
         console.log("error", error);
     }
@@ -212,5 +212,6 @@ export {
     theButton,
     updateUI,
     countDownDate,
+    getCityInfo,
     newElement
 }
