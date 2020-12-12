@@ -33,12 +33,12 @@ app.get('/test', async (req, res) => {
 })
 
 // POST route
-app.post('/', addData);
+app.post('/add', addData);
 
 function addData(req, res) {
     journeyData['departing'] = req.body.departing;
     journeyData['arriving'] = req.body.arriving;
-    journeyData['date'] = req.body.tripDate;
+    journeyData['date'] = req.body.travelDate;
     journeyData['daysToTravel'] = req.body.daysToTravel;
     journeyData['weather'] = req.body.weather;
     res.send(journeyData);
