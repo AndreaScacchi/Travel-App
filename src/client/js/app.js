@@ -40,7 +40,8 @@ function handleSubmit() {
     event.preventDefault();
     const departing = document.getElementById("input_from").value;
     const arriving = document.getElementById("input_to").value;
-    const travelDate = document.getElementById("input_date").value;
+    const travelDate = new Date(document.getElementById("input_date").value);
+    const newDate = (new Date(travelDate).getTime()) / 1000;
 
     //Input validation
     if(departing.length == 0) {
@@ -55,8 +56,6 @@ function handleSubmit() {
         alert("Please enter the date");
         return
     }
-
-    const newDate = (new Date(travelDate).getTime()) / 1000;
 
     getCityInfo(geoNameURL, arriving, geoNameUsername)
     .then((cityInfo) => {
@@ -193,7 +192,7 @@ function newElement() {
 const updateUI = async(userData) => {
     result.classList.remove('hidden');
     form.classList.add('hidden');
-    const response = await fetch(pixaBayURL + pixaBayKey + "&q" + userData.arriving + "city&image_type=photo");
+    const response = await fetch(pixaBayURL + pixaBayKey + "&q" + userData.arriving + "+city&image_type=photo");
     try {
         const getImage = await response.json();
         //console.log(allData);
