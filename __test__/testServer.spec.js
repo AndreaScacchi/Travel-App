@@ -1,9 +1,9 @@
-const app = require('../src/server/server.js');
-const superTest = require('superTest');
-const request = superTest(app);
+const app = require('../src/server/server');
+const supertest = require('supertest');
+const request = supertest(app);
 
-describe('Test Endpoint', () => {
-    it('/test', async (done) => {
+describe('Test Endpoint', function() {
+    it('/get test endpoint', async done => {
         const response = await request.get('/test');
         expect(response.status).toBe(200);
         done();
