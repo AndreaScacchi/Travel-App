@@ -200,7 +200,7 @@ const updateUI = async(userData) => {
         document.querySelector('.date').innerHTML = userData.travelDate;
         document.querySelector('.days').innerHTML = userData.daysToTravel;
         document.querySelector('.weather').innerHTML = Math.round(userData.weather * 9 / 5 + 32)+ "&deg;F";
-        //document.querySelector('.pixabay-image').setAttribute('src', getImage.hits[0].webformatURL);
+        document.querySelector('.pixabay-image').setAttribute('src', getImage.hits[0].webformatURL);
     } catch (error) {
         console.log("error", error);
     }
