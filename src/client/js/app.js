@@ -16,12 +16,17 @@ const pixaBayKey = '19344538-371102874db6349622a031d1a';
 // Button function
 const myButton = document.querySelector(".btn");
 
-function theButton() {
+/*function theButton() {
     myButton.addEventListener("click", function () {
         window.scrollTo({ behavior: "smooth", top: 0 });
     });
 }
-theButton();
+theButton();*/
+if(myButton){
+    myButton.addEventListener("click", function () {
+        window.scrollTo({ behavior: "smooth", top: 0 });
+    });
+}
 
 //Global variables
 const form = document.querySelector("#form");
@@ -29,11 +34,28 @@ const result = document.getElementById("results");
 const dateNow = (Date.now()) / 1000;
 const theInput = document.querySelector(".button_submit");
 const addBtn = document.querySelector('.addBtn');
+const print = document.getElementById('print');
+const cancel = document.getElementById('delete');
 
-addBtn.addEventListener('click', newElement);
-theInput.addEventListener("click", handleSubmit);
-document.getElementById("print").addEventListener("click", handleSubmit);
-document.getElementById("delete").addEventListener("click", handleSubmit);
+/*addBtn.addEventListener('click', newElement);*/
+if(addBtn){
+    addBtn.addEventListener('click', newElement);
+};
+
+/*theInput.addEventListener("click", handleSubmit);*/
+if(theInput){
+    theInput.addEventListener("click", handleSubmit);
+};
+
+/*document.getElementById("print").addEventListener("click", handleSubmit);*/
+if(print){
+    print.addEventListener("click", handleSubmit);
+};
+
+/*document.getElementById("delete").addEventListener("click", handleSubmit);*/
+if(cancel){
+    cancel.addEventListener("click", handleSubmit);
+};
 
 //Async function for the user Input
 function handleSubmit() {
@@ -208,7 +230,8 @@ const updateUI = async(userData) => {
 
 export {
     handleSubmit,
-    theButton,
+    /*theButton,*/
+    myButton,
     updateUI,
     countDownDate,
     getCityInfo,
