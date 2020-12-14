@@ -80,16 +80,16 @@ function handleSubmit() {
     }
 
     getCityInfo(geoNameURL, arriving, geoNameUsername)
-    .then((cityInfo) => {
+    .then(async (cityInfo) => {
         const latitude = cityInfo.geonames[0].lat;
         const longitude = cityInfo.geonames[0].lng;
         const country = cityInfo.geonames[0].countryName;
-        const weatherData = getWeather(latitude, longitude, country, newDate)
+        const weatherData = await getWeather(latitude, longitude, country, newDate)
         return weatherData;
     })
-    .then((weatherData) => {
+    .then(async (weatherData) => {
         const daysToTravel = Math.round((newDate - dateNow) / 86400);
-        const userData = postTravelData('/add', { departing, arriving, travelDate, weather: weatherData.data[0].high_temp, daysToTravel });
+        const userData = await postTravelData('/add', { departing, arriving, travelDate, weather: weatherData.data[0].high_temp, daysToTravel });
         return userData;
     }).then((userData) => {
         updateUI(userData);
