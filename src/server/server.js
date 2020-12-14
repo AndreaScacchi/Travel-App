@@ -47,3 +47,5 @@ function addData(req, res) {
     journeyData = req.body
     res.send(journeyData);
 }
+
+module.exports = app
