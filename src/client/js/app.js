@@ -40,7 +40,7 @@ function handleSubmit() {
     event.preventDefault();
     const departing = document.getElementById("input_from").value;
     const arriving = document.getElementById("input_to").value;
-    const travelDate = new Date(document.getElementById("input_date").value);
+    const travelDate = document.getElementById("input_date").value;
     const newDate = (new Date(travelDate).getTime()) / 1000;
 
     //Input validation
@@ -192,14 +192,14 @@ function newElement() {
 const updateUI = async(userData) => {
     result.classList.remove('hidden');
     form.classList.add('hidden');
-    const response = await fetch(pixaBayURL + pixaBayKey + "&q" + userData.arriving + "+city&image_type=photo");
+    const response = await fetch(pixaBayURL + pixaBayKey + "&q=" + userData.arriving + "+city&image_type=photo");
     try {
         const getImage = await response.json();
         //console.log(allData);
         document.querySelector('.city').innerHTML = userData.arriving;
         document.querySelector('.date').innerHTML = userData.travelDate;
         document.querySelector('.days').innerHTML = userData.daysToTravel;
-        document.querySelector('.weather').innerHTML = Math.round(userData.weather * 9 / 5 + 32)+ "&deg;F";
+        document.querySelector('.weather').innerHTML = /*Math.round(userData.weather * 9 / 5 + 32)+ "&deg;F";*/ userData.weather;
         document.querySelector('.pixabay-image').setAttribute('src', getImage.hits[0].webformatURL);
     } catch (error) {
         console.log("error", error);
