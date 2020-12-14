@@ -1,5 +1,6 @@
 import { handleSubmit } from './js/app'
-import { theButton } from './js/app'
+/*import { theButton } from './js/app'*/
+import { myButton } from './js/app'
 import { countDownDate } from './js/app'
 import { newElement } from './js/app'
 import { getCityInfo } from './js/app'
@@ -48,7 +49,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 export {
     handleSubmit,
-    theButton,
+    /*theButton,*/
+    myButton,
     countDownDate,
     getCityInfo,
     //showResults,
