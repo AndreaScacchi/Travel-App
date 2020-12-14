@@ -29,7 +29,7 @@ app.get('/all', function (req, res) {
 })
 
 app.get('/test', async (request, response) => {
-    res.json();
+    response.json();
 })
 
 // POST route
