@@ -35,11 +35,15 @@ app.get('/test', async (request, response) => {
 // POST route
 app.post('/add', addData);
 
-function addData(req, res) {
+/*function addData(req, res) {
     journeyData['departing'] = req.body.departing;
     journeyData['arriving'] = req.body.arriving;
     journeyData['date'] = req.body.travelDate;
     journeyData['daysToTravel'] = req.body.daysToTravel;
     journeyData['weather'] = req.body.weather;
+    res.send(journeyData);
+}*/
+function addData(req, res) {
+    journeyData = req.body
     res.send(journeyData);
 }
