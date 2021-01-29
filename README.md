@@ -7,7 +7,13 @@ In this project I used:
 - **CSS**
 - **JavaScript**
 - **DOM**
+- **JSON**
 - **NPM**
+- **Node.js**
+- **Express**
+- **Sass**
+- **Babel**
+- **Jest**
 - **Webpack**
 
 Also:
